@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test Amazon search functionality" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-22T04:36:15" hostname="MBP-de-Patricio" time="15.683">
+  <properties/>
+  <testcase name="As a Customer when I search for Alexa, I want to see if the third option on the second page is available for purchase and can be added to the cart." classname="Test Amazon search functionality" time="15.683"/>
+  <system-out><![CDATA[
+@Amazon @Cart
+Scenario: As a Customer when I search for Alexa, I want to see if the third option on the second page is available for purchase and can be added to the cart. # src/test/resources/features/AmazonSearch.feature:5
+  Given the user navigates to www.amazon.com                                                                                                                  # steps.AmazonSearchSteps.navigateToAmazon()
+  And searches for Playstation                                                                                                                                # steps.AmazonSearchSteps.enterSearchCriteria(java.lang.String)
+  And navigates to the second page                                                                                                                            # steps.AmazonSearchSteps.navigateToSecondPage()
+  And selects the third item                                                                                                                                  # steps.AmazonSearchSteps.selectsThirdItem()
+  Then the user is able to add it to the cart                                                                                                                 # steps.AmazonSearchSteps.itemCanBeAddedToTheCart()
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 91.0.4472.19 (1bf021f248676a0b2ab3ee0561d83a59e424c23e-refs/branch-heads/4472@{#288}) on port 12473
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1629606978.146][WARNING]: This version of ChromeDriver has not been tested with Chrome version 92.
+ago. 22, 2021 4:36:18 P.?M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACI?N: Detected dialect: W3C
+]]></system-err>
+</testsuite>
