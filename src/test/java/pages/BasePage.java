@@ -1,36 +1,35 @@
 package pages;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 
 
 public class BasePage {
 
-    
     protected static WebDriver driver;
-    private static WebDriverWait wait;
     private static Actions action;
     
-
     static {
         ChromeOptions chromeOptions = new ChromeOptions();
         driver = new ChromeDriver(chromeOptions);
-        wait = new WebDriverWait(driver,10);
     }
 
     public BasePage(WebDriver driver){
         BasePage.driver = driver;
-        wait = new WebDriverWait(driver, 10);
         
     }
 
@@ -47,7 +46,7 @@ public class BasePage {
     }
 
     private WebElement Find(String locator){
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+        return driver.findElement(By.xpath(locator));
     }
 
     public void clickElement(String locator){
@@ -67,6 +66,11 @@ public class BasePage {
         Select dropdown = new Select (Find(locator));
 
         dropdown.selectByValue(valueToSelect);
+    }
+
+    public void getScreenshot(String locator, String nameOfFile) throws IOException{
+        File file = Find(locator).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(file,new File(nameOfFile+".png"));
     }
 
     public void selectFromDropdownByIndex(String locator, int valueToSelect){
@@ -148,4 +152,6 @@ public class BasePage {
         List<WebElement> results = driver.findElements(By.xpath(locator));
         results.get(index).click();
     }
+
+    
 }
