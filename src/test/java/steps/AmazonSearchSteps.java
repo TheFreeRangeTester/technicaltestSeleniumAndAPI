@@ -20,9 +20,9 @@ public class AmazonSearchSteps {
         amazon.clickSearch();
     }
 
-    @And("^navigates to the second page$")
-    public void navigateToSecondPage() {
-        amazon.goToPage2();
+    @And("^navigates to the page number (.+)$")
+    public void navigateToSecondPage(String pageNumber) {
+        amazon.goToPage(pageNumber);
     }
 
     @And("^selects the third item$")

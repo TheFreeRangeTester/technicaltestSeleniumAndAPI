@@ -13,7 +13,7 @@ import pages.BasePage;
     glue = "steps",
     plugin = { "pretty", "html:target/cucumber-reports"},
     monochrome = true,
-    tags = "@Amazon"
+    tags = "@Cart"
 )
 
 public class runner {

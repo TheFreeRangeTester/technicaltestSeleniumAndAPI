@@ -22,6 +22,4 @@ public class GridPage extends BasePage {
         return elementIsDisplayed(mainTable);
     }
 
-    
-
 }
