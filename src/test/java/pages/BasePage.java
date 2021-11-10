@@ -19,8 +19,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-
-
 public class BasePage {
 
     protected static WebDriver driver;
@@ -30,6 +28,7 @@ public class BasePage {
     static {
         ChromeOptions chromeOptions = new ChromeOptions();
         driver = new ChromeDriver(chromeOptions);
+        
     }
 
     public BasePage(WebDriver driver){
@@ -152,11 +151,5 @@ public class BasePage {
     public List<WebElement> bringMeAllElements(String locator){
         return driver.findElements(By.className(locator));
     }
-    
-    public void selectNthElement(String locator, int index){
-        List<WebElement> results = driver.findElements(By.xpath(locator));
-        results.get(index).click();
-    }
-
     
 }

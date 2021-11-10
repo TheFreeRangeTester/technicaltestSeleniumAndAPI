@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test Amazon search functionality" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-11-10T00:07:41" hostname="MBP-de-Patricio" time="19.524">
+  <properties/>
+  <testcase name="As a Customer when I search for Alexa, I want to see if the third option on the second page is available for purchase and can be added to the cart." classname="Test Amazon search functionality" time="19.524">
+    <failure message="org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/span[3]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/h2[1]/a[1]/span[1] (tried for 10 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.0.0', revision: '3a21814679'&#10;System info: host: 'MBP-de-Patricio', ip: '2404:440c:1708:de00:d98f:186a:75ad:a70a%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.0.1', java.version: '16.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: /var/folders/47/rwrn0jz561x...}, goog:chromeOptions: {debuggerAddress: localhost:59920}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:59920/devtoo..., se:cdpVersion: 95.0.4638.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 51c3de2e847a81bc3c172fda65209769" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/span[3]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/h2[1]/a[1]/span[1] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'MBP-de-Patricio', ip: '2404:440c:1708:de00:d98f:186a:75ad:a70a%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.0.1', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: /var/folders/47/rwrn0jz561x...}, goog:chromeOptions: {debuggerAddress: localhost:59920}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:59920/devtoo..., se:cdpVersion: 95.0.4638.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 51c3de2e847a81bc3c172fda65209769
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at app//pages.BasePage.Find(BasePage.java:53)
+	at app//pages.BasePage.clickElement(BasePage.java:58)
+	at app//pages.AmazonSearchPage.pick3rdItem(AmazonSearchPage.java:33)
+	at app//steps.AmazonSearchSteps.selectsThirdItem(AmazonSearchSteps.java:30)
+	at ✽.selects the third item(file:///Users/patominer/Documents/SeleniumCucumberJavaProject/src/test/resources/features/AmazonSearch.feature:9)
+</failure>
+  </testcase>
+  <system-out><![CDATA[
+@Amazon @Cart
+Scenario Outline: As a Customer when I search for Alexa, I want to see if the third option on the second page is available for purchase and can be added to the cart. # src/test/resources/features/AmazonSearch.feature:14
+  Given the user navigates to www.amazon.com                                                                                                                          # steps.AmazonSearchSteps.navigateToAmazon()
+  And searches for playstation                                                                                                                                        # steps.AmazonSearchSteps.enterSearchCriteria(java.lang.String)
+  And navigates to the page number 2                                                                                                                                  # steps.AmazonSearchSteps.navigateToSecondPage(java.lang.String)
+  And selects the third item                                                                                                                                          # steps.AmazonSearchSteps.selectsThirdItem()
+      org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/span[3]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/h2[1]/a[1]/span[1] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'MBP-de-Patricio', ip: '2404:440c:1708:de00:d98f:186a:75ad:a70a%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.0.1', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: /var/folders/47/rwrn0jz561x...}, goog:chromeOptions: {debuggerAddress: localhost:59920}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:59920/devtoo..., se:cdpVersion: 95.0.4638.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 51c3de2e847a81bc3c172fda65209769
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at pages.BasePage.Find(BasePage.java:53)
+	at pages.BasePage.clickElement(BasePage.java:58)
+	at pages.AmazonSearchPage.pick3rdItem(AmazonSearchPage.java:33)
+	at steps.AmazonSearchSteps.selectsThirdItem(AmazonSearchSteps.java:30)
+	at ���.selects the third item(file:///Users/patominer/Documents/SeleniumCucumberJavaProject/src/test/resources/features/AmazonSearch.feature:9)
+
+  Then the user is able to add it to the cart                                                                                                                         # steps.AmazonSearchSteps.itemCanBeAddedToTheCart()
+
+    Scenario fallando, referirse a la imagen adjunta.
+
+
+    Embedding Screenshot of the error [image/png 306716 bytes]
+
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 94.0.4606.61 (418b78f5838ed0b1c69bb4e51ea0252171854915-refs/branch-heads/4606@{#1204}) on port 59859
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1636502864.701][WARNING]: This version of ChromeDriver has not been tested with Chrome version 95.
+nov. 10, 2021 1:07:45 P.?M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACI?N: Detected dialect: W3C
+nov. 10, 2021 1:07:45 P.?M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFORMACI?N: Found exact CDP implementation for version 95
+]]></system-err>
+</testsuite>

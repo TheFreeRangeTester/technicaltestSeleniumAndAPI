@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Test Amazon search functionality</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Test Amazon search functionality</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Test Amazon search functionality</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">19.524s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+<li>
+<a href="#tab3">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="As a Customer when I search for Alexa, I want to see if the third option on the second page is available for purchase and can be added to the cart."></a>
+<h3 class="failures">As a Customer when I search for Alexa, I want to see if the third option on the second page is available for purchase and can be added to the cart.</h3>
+<span class="code">
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/span[3]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/h2[1]/a[1]/span[1] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'MBP-de-Patricio', ip: '2404:440c:1708:de00:d98f:186a:75ad:a70a%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.0.1', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: /var/folders/47/rwrn0jz561x...}, goog:chromeOptions: {debuggerAddress: localhost:59920}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:59920/devtoo..., se:cdpVersion: 95.0.4638.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 51c3de2e847a81bc3c172fda65209769
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at app//pages.BasePage.Find(BasePage.java:53)
+	at app//pages.BasePage.clickElement(BasePage.java:58)
+	at app//pages.AmazonSearchPage.pick3rdItem(AmazonSearchPage.java:33)
+	at app//steps.AmazonSearchSteps.selectsThirdItem(AmazonSearchSteps.java:30)
+	at ✽.selects the third item(file:///Users/patominer/Documents/SeleniumCucumberJavaProject/src/test/resources/features/AmazonSearch.feature:9)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">As a Customer when I search for Alexa, I want to see if the third option on the second page is available for purchase and can be added to the cart.</td>
+<td class="failures">19.524s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+@Amazon @Cart
+Scenario Outline: As a Customer when I search for Alexa, I want to see if the third option on the second page is available for purchase and can be added to the cart. # src/test/resources/features/AmazonSearch.feature:14
+  Given the user navigates to www.amazon.com                                                                                                                          # steps.AmazonSearchSteps.navigateToAmazon()
+  And searches for playstation                                                                                                                                        # steps.AmazonSearchSteps.enterSearchCriteria(java.lang.String)
+  And navigates to the page number 2                                                                                                                                  # steps.AmazonSearchSteps.navigateToSecondPage(java.lang.String)
+  And selects the third item                                                                                                                                          # steps.AmazonSearchSteps.selectsThirdItem()
+      org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: /html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/span[3]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/h2[1]/a[1]/span[1] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'MBP-de-Patricio', ip: '2404:440c:1708:de00:d98f:186a:75ad:a70a%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.0.1', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: /var/folders/47/rwrn0jz561x...}, goog:chromeOptions: {debuggerAddress: localhost:59920}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:59920/devtoo..., se:cdpVersion: 95.0.4638.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 51c3de2e847a81bc3c172fda65209769
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at pages.BasePage.Find(BasePage.java:53)
+	at pages.BasePage.clickElement(BasePage.java:58)
+	at pages.AmazonSearchPage.pick3rdItem(AmazonSearchPage.java:33)
+	at steps.AmazonSearchSteps.selectsThirdItem(AmazonSearchSteps.java:30)
+	at ���.selects the third item(file:///Users/patominer/Documents/SeleniumCucumberJavaProject/src/test/resources/features/AmazonSearch.feature:9)
+
+  Then the user is able to add it to the cart                                                                                                                         # steps.AmazonSearchSteps.itemCanBeAddedToTheCart()
+
+    Scenario fallando, referirse a la imagen adjunta.
+
+
+    Embedding Screenshot of the error [image/png 306716 bytes]
+
+</pre>
+</span>
+</div>
+<div id="tab3" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Starting ChromeDriver 94.0.4606.61 (418b78f5838ed0b1c69bb4e51ea0252171854915-refs/branch-heads/4606@{#1204}) on port 59859
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1636502864.701][WARNING]: This version of ChromeDriver has not been tested with Chrome version 95.
+nov. 10, 2021 1:07:45 P.?M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACI?N: Detected dialect: W3C
+nov. 10, 2021 1:07:45 P.?M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFORMACI?N: Found exact CDP implementation for version 95
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.2</a> at 10 nov. 2021 13:08:10</p>
+</div>
+</div>
+</body>
+</html>
