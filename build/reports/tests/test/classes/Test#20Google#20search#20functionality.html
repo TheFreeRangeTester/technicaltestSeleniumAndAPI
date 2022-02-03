@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">20.637s</div>
+<div class="counter">8.968s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,42 +61,16 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
+<a href="#tab1">Standard output</a>
 </li>
 <li>
-<a href="#tab2">Standard output</a>
-</li>
-<li>
-<a href="#tab3">Standard error</a>
+<a href="#tab2">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="As a user I enter a search criteria in Google"></a>
-<h3 class="failures">As a user I enter a search criteria in Google</h3>
-<span class="code">
-<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath:  (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.0.0', revision: '3a21814679'
-System info: host: 'MBP-de-Patricio', ip: '2404:440c:1708:de00:ed48:aa7a:cc9c:8d69%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '16.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: /var/folders/47/rwrn0jz561x...}, goog:chromeOptions: {debuggerAddress: localhost:50164}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50164/devtoo..., se:cdpVersion: 97.0.4692.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 72e015680946c30bbeac8158844c3b73
-	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
-	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at app//pages.BasePage.Find(BasePage.java:52)
-	at app//pages.BasePage.textFromElement(BasePage.java:134)
-	at app//pages.GooglePage.firstResult(GooglePage.java:27)
-	at app//steps.GoogleSteps.validateResults(GoogleSteps.java:30)
-	at ✽.the results match the criteria(file:///Users/patominer/Documents/SeleniumCucumberJavaProject/src/test/resources/features/Google.feature:8)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -107,13 +81,13 @@ Session ID: 72e015680946c30bbeac8158844c3b73
 </tr>
 </thead>
 <tr>
-<td class="failures">As a user I enter a search criteria in Google</td>
-<td class="failures">20.637s</td>
-<td class="failures">failed</td>
+<td class="success">As a user I enter a search criteria in Google</td>
+<td class="success">8.968s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
 <pre>
@@ -122,42 +96,21 @@ Scenario: As a user I enter a search criteria in Google # src/test/resources/fea
   Given I am on the Google search page                  # steps.GoogleSteps.navigateToGoogle()
   When I enter a search criteria                        # steps.GoogleSteps.enterSearchCriteria()
   And click on the search button                        # steps.GoogleSteps.clickSearchButton()
-  Then the results match the criteria                   # steps.GoogleSteps.validateResults()
-      org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath:  (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.0.0', revision: '3a21814679'
-System info: host: 'MBP-de-Patricio', ip: '2404:440c:1708:de00:ed48:aa7a:cc9c:8d69%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '16.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: /var/folders/47/rwrn0jz561x...}, goog:chromeOptions: {debuggerAddress: localhost:50164}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50164/devtoo..., se:cdpVersion: 97.0.4692.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 72e015680946c30bbeac8158844c3b73
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at pages.BasePage.Find(BasePage.java:52)
-	at pages.BasePage.textFromElement(BasePage.java:134)
-	at pages.GooglePage.firstResult(GooglePage.java:27)
-	at steps.GoogleSteps.validateResults(GoogleSteps.java:30)
-	at ���.the results match the criteria(file:///Users/patominer/Documents/SeleniumCucumberJavaProject/src/test/resources/features/Google.feature:8)
-
-
-    Scenario fallando, referirse a la imagen adjunta.
-
-
-    Embedding Screenshot of the error [image/png 341549 bytes]
-
 </pre>
 </span>
 </div>
-<div id="tab3" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>Starting ChromeDriver 97.0.4692.71 (adefa7837d02a07a604c1e6eff0b3a09422ab88d-refs/branch-heads/4692@{#1247}) on port 59403
+<pre>Starting ChromeDriver 97.0.4692.71 (adefa7837d02a07a604c1e6eff0b3a09422ab88d-refs/branch-heads/4692@{#1247}) on port 54498
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-feb. 03, 2022 1:38:12 P.?M. org.openqa.selenium.remote.ProtocolHandshake createSession
+feb. 03, 2022 1:42:31 P.?M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACI?N: Detected dialect: W3C
-feb. 03, 2022 1:38:12 P.?M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+feb. 03, 2022 1:42:31 P.?M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 ADVERTENCIA: Unable to find an exact match for CDP version 97, so returning the closest version found: 95
-feb. 03, 2022 1:38:12 P.?M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+feb. 03, 2022 1:42:31 P.?M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFORMACI?N: Found CDP implementation for version 97 of 95
 </pre>
 </span>
@@ -170,7 +123,7 @@ INFORMACI?N: Found CDP implementation for version 97 of 95
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.2</a> at 3 feb. 2022 13:38:39</p>
+<a href="http://www.gradle.org">Gradle 7.2</a> at 3 feb. 2022 13:42:41</p>
 </div>
 </div>
 </body>
