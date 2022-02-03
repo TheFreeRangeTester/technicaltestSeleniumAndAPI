@@ -151,5 +151,26 @@ public class BasePage {
     public List<WebElement> bringMeAllElements(String locator){
         return driver.findElements(By.className(locator));
     }
+
+    public void selectNthElementFromList(String locator, int index){
+        List<WebElement> list = driver.findElements(By.className(locator));
+        list.get(index).click();
+    }
+
+    public void dragAndDrop(String locator, String locator2){
+        WebElement element = Find(locator);
+        WebElement element2 = Find(locator2);
+        action.dragAndDrop(element, element2).build().perform();
+    }
+
+    public void selectCriteriaFromList(String locator, String criteria){
+        List<WebElement> list = driver.findElements(By.className(locator));
+        for(WebElement element : list){
+            if(element.getText().equals(criteria)){
+                element.click();
+                break;
+            }
+        }
+    }
     
 }

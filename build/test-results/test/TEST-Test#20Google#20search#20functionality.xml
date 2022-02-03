@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test Google search functionality" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-02-03T00:38:08" hostname="MBP-de-Patricio" time="20.637">
+  <properties/>
+  <testcase name="As a user I enter a search criteria in Google" classname="Test Google search functionality" time="20.637">
+    <failure message="org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath:  (tried for 10 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.0.0', revision: '3a21814679'&#10;System info: host: 'MBP-de-Patricio', ip: '2404:440c:1708:de00:ed48:aa7a:cc9c:8d69%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '16.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: /var/folders/47/rwrn0jz561x...}, goog:chromeOptions: {debuggerAddress: localhost:50164}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50164/devtoo..., se:cdpVersion: 97.0.4692.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 72e015680946c30bbeac8158844c3b73" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath:  (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'MBP-de-Patricio', ip: '2404:440c:1708:de00:ed48:aa7a:cc9c:8d69%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: /var/folders/47/rwrn0jz561x...}, goog:chromeOptions: {debuggerAddress: localhost:50164}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50164/devtoo..., se:cdpVersion: 97.0.4692.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 72e015680946c30bbeac8158844c3b73
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at app//pages.BasePage.Find(BasePage.java:52)
+	at app//pages.BasePage.textFromElement(BasePage.java:134)
+	at app//pages.GooglePage.firstResult(GooglePage.java:27)
+	at app//steps.GoogleSteps.validateResults(GoogleSteps.java:30)
+	at ✽.the results match the criteria(file:///Users/patominer/Documents/SeleniumCucumberJavaProject/src/test/resources/features/Google.feature:8)
+</failure>
+  </testcase>
+  <system-out><![CDATA[
+@Test
+Scenario: As a user I enter a search criteria in Google # src/test/resources/features/Google.feature:4
+  Given I am on the Google search page                  # steps.GoogleSteps.navigateToGoogle()
+  When I enter a search criteria                        # steps.GoogleSteps.enterSearchCriteria()
+  And click on the search button                        # steps.GoogleSteps.clickSearchButton()
+  Then the results match the criteria                   # steps.GoogleSteps.validateResults()
+      org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath:  (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'MBP-de-Patricio', ip: '2404:440c:1708:de00:ed48:aa7a:cc9c:8d69%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: /var/folders/47/rwrn0jz561x...}, goog:chromeOptions: {debuggerAddress: localhost:50164}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:50164/devtoo..., se:cdpVersion: 97.0.4692.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 72e015680946c30bbeac8158844c3b73
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at pages.BasePage.Find(BasePage.java:52)
+	at pages.BasePage.textFromElement(BasePage.java:134)
+	at pages.GooglePage.firstResult(GooglePage.java:27)
+	at steps.GoogleSteps.validateResults(GoogleSteps.java:30)
+	at ���.the results match the criteria(file:///Users/patominer/Documents/SeleniumCucumberJavaProject/src/test/resources/features/Google.feature:8)
+
+
+    Scenario fallando, referirse a la imagen adjunta.
+
+
+    Embedding Screenshot of the error [image/png 341549 bytes]
+
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 97.0.4692.71 (adefa7837d02a07a604c1e6eff0b3a09422ab88d-refs/branch-heads/4692@{#1247}) on port 59403
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+feb. 03, 2022 1:38:12 P.?M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACI?N: Detected dialect: W3C
+feb. 03, 2022 1:38:12 P.?M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTENCIA: Unable to find an exact match for CDP version 97, so returning the closest version found: 95
+feb. 03, 2022 1:38:12 P.?M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFORMACI?N: Found CDP implementation for version 97 of 95
+]]></system-err>
+</testsuite>
