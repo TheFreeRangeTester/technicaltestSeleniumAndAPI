@@ -11,5 +11,5 @@ Feature: Test Amazon search functionality
 
     Examples: 
             |Product    |
-            |playstation     |
+            |playstation|
        

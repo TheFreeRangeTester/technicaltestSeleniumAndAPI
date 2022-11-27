@@ -13,14 +13,13 @@ import pages.BasePage;
     glue = "steps",
     plugin = { "pretty", "html:target/cucumber-reports"},
     monochrome = true,
-    tags = "@Test"
+    tags = "@TradeMe"
 )
 
 public class runner {
     @AfterClass
     public static void cleanDriver(){
         BasePage.closeBrowser();
-
     }
 
 }

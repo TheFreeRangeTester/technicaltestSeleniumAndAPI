@@ -1,14 +1,9 @@
 package pages;
 
-import java.io.File;
-import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
-
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -49,7 +44,7 @@ public class BasePage {
     }
 
     private WebElement Find(String locator){
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+        return wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
         //return driver.findElement(By.xpath(locator));
     }
 
@@ -66,15 +61,16 @@ public class BasePage {
         Find(locator).sendKeys(textToWrite);
     }
 
+    public int dropdownSize(String locator){
+        Select dropdown = new Select(Find(locator));
+        List<WebElement> dropdownOptions = dropdown.getOptions();
+       return dropdownOptions.size();
+    }
+
     public void selectFromDropdownByValue(String locator, String valueToSelect){
         Select dropdown = new Select (Find(locator));
 
         dropdown.selectByValue(valueToSelect);
-    }
-
-    public void getScreenshot(String locator, String nameOfFile) throws IOException{
-        File file = Find(locator).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(file,new File(nameOfFile+".png"));
     }
 
     public void selectFromDropdownByIndex(String locator, int valueToSelect){
