@@ -53,7 +53,9 @@ The BasePage.java is the class where the driver and the methods to interact with
 
 Running from a Runner.java , specifying which tag to run (you set the tags in the Scenarios).
 Running from the command line and using:
+´´´
 gradle test -Dcucumber.options="--tags @CucumberTag"
+´´´
 Observe that the "test" task is created in the Gradle.Build file.
 
 Reports
