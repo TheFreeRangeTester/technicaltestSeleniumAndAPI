@@ -1,8 +1,6 @@
-Goal of this repository
+# Framework to Automate E2E with Selenium (UI), Rest Assured (API) and Cucumber (BDD).
 
-Framework to Automate E2E with Selenium (UI), Rest Assured (API) and Cucumber (BDD).
-
-Index
+## Index
 
 Technologies
 Setup
@@ -13,31 +11,34 @@ Running the tests
 Reports
 Technologies
 
-This project was created with:
+## This project was created with:
 
-Selenium WebDriver: To interact with WebElements on the Webpage.
-Java: As the programming language.
-Cucumber: To write test scenarios as Behaviour Driven Development features and collaborate with Business Analysts.
-Extent Reports: To generate HTML reports.
-Gradle: as building tool.
-Setup
+- Selenium WebDriver: To interact with WebElements on the Webpage.
+- Java: As the programming language.
+- Cucumber: To write test scenarios as Behaviour Driven Development features and collaborate with Business Analysts.
+- Cucumber Reports: To generate HTML reports.
+- Gradle: as building tool.
 
-Install JDK (latest stable version).
-Download the WebDrivers you will use in your project.
-If using Windows, specify the path to the driver in BasePage.java like
+## Setup
+
+1- Install JDK (latest stable version).
+2- Download the WebDrivers you will use in your project.
+3- If using Windows, specify the path to the driver in BasePage.java like
+´´´
 System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
-If you are on MacOS:
-Open up Terminal
-Run sudo nano /etc/paths
-Enter your password
-Go to the bottom of the file and enter the path you wish to add (My PATH looks like: /Users/myname/Documents/WebDriver)
-Control-x to quit
-Y to save
-Press enter to confirm
-To double check, quit Terminal and relaunch it. Run echo $PATH. You should see your newly added path in the stream of other paths already there.
-Finally, update your tests to run using Chrome and run your tests!
-Install the Cucumber plugin on your IDE of choice.
-Build the project to download the dependencies specified on Gradle.build.
+´´´
+4- If you are on MacOS:
+- Open up Terminal
+- Run sudo nano /etc/paths
+- Enter your password
+- Go to the bottom of the file and enter the path you wish to add (My PATH looks like: /Users/myname/Documents/WebDriver)
+- Control-x to quit
+- Y to save
+- Press enter to confirm
+- To double check, quit Terminal and relaunch it. Run echo $PATH. You should see your newly added path in the stream of other paths already there.
+5- Install the Cucumber plugin on your IDE of choice.
+6- Build the project to download the dependencies specified on Gradle.build.
+
 ## Page Object Model This Framework uses the Page Object Model, with a BasePage taking care of creating the instance of the Driver and inheriting methods to interact with the WebElements on the classes within the Pages directory.
 
 Features and Cucumber
