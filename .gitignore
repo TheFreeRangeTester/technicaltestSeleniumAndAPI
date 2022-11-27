@@ -1,5 +1,19 @@
 # Created by https://www.toptal.com/developers/gitignore/api/java,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=java,visualstudiocode
+**/build/
+!src/**/build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Avoid ignore Gradle wrappper properties
+!gradle-wrapper.properties
+
+# Cache of project
+.gradletasknamecache
 
 ### Java ###
 # Compiled class file
