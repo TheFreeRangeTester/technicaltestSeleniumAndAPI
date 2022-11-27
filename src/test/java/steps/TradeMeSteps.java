@@ -32,7 +32,6 @@ public class TradeMeSteps {
     @Then("^I can see it has (.+) records in the results$")
     public void printAmount(String expectedAmountOfResults){
         trademe.clickSearch();
-        Assert.assertTrue(trademe.resultsAmount().contains(expectedAmountOfResults));
         Assert.assertEquals("Showing "+expectedAmountOfResults+" results", trademe.resultsAmount());
     }
 
