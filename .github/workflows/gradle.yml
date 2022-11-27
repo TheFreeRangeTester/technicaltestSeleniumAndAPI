@@ -26,4 +26,4 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
     - name: Build with Gradle
-      run: test -Dcucumber.options="--tags @Google"
+      run: test -Dcucumber.options="--tags @TradeMe"

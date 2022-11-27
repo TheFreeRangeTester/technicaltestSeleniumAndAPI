@@ -1,6 +1,6 @@
 Goal of this repository
 
-Template framework to start Automating with Selenium and Cucumber both on UI and API (Java).
+Framework to Automate E2E with Selenium (UI), Rest Assured (API) and Cucumber (BDD).
 
 Index
 
@@ -57,4 +57,4 @@ Observe that the "test" task is created in the Gradle.Build file.
 
 Reports
 
-Once executed, you will find the reports inside the Test-output directory, containing an HTML file that you can open with any browser and access the report with the results.
+Once executed, you will get a url in the terminal with the generated report (it self destructs in 24 hs :D). 

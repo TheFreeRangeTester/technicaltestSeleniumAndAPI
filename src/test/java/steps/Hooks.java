@@ -16,7 +16,7 @@ public class Hooks extends BasePage{
     @After
     public void tearDown(Scenario scenario) {
     if(scenario.isFailed()){
-        scenario.log("Scenario fallando, referirse a la imagen adjunta.");
+        scenario.log("Scenario failing, please refer to the attached image.");
         final byte[] screenshot = ((TakesScreenshot) driver)
                     .getScreenshotAs(OutputType.BYTES);
         scenario.attach(screenshot, "image/png", "Screenshot of the error");
