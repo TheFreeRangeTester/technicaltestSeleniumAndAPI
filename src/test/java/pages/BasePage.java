@@ -22,6 +22,7 @@ public class BasePage {
   
     static {
         ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(chromeOptions);
         
     }
