@@ -16,10 +16,10 @@ Scenario Outline: "As a user, I can validate that each make has the right amount
 
         Examples:
             | Make    | Amount |
-            | Ferrari | 32     |
-            | BMW     | 3,660  |
-            | Mazda   | 6,389  |
-            | Honda   | 2,802  |
+            | Ferrari | 47     |
+            | BMW     | 3,390  |
+            | Mazda   | 5,703  |
+            | Honda   | 2,772  |
 
 Scenario: "As a user, I want to verify the amount of car makes throught the API"
     Given I send the request to the endpoint
