@@ -39,7 +39,7 @@ public class BasePage {
     public void goToLinkText(String linkText){
         driver.findElement(By.linkText(linkText)).click();;
     }
-
+ 
     public static void closeBrowser(){
         driver.quit();
     }
